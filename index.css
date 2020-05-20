@@ -1,0 +1,20 @@
+input[type="radio"] {
+    visibility: hidden;
+}
+
+label {
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* https://stackoverflow.com/questions/14243088/in-css-is-there-a-selector-for-referencing-a-specific-input-type-that-also-has-a */
+
+input.upvote[type="radio"]:checked ~ label:first-of-type {
+    background-color: green;
+}
+
+input.downvote[type="radio"]:checked ~ label:last-of-type {
+    background-color: red;
+}
